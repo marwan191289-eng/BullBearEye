@@ -1,0 +1,67 @@
+﻿# Environment files with secrets
+.env
+.env.local
+.env.*.local
+.env.prod
+*.env
+
+# Keep example files
+!.env.example
+!.env.prod.example
+
+# Docker volumes and data
+postgres_data/
+redis_data/
+
+# SSL certificates
+ssl/
+*.pem
+*.crt
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend_env/
+.venv/
+venv/
+ENV/
+env/
+
+# Node
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Testing
+coverage/
+.pytest_cache/
+.coverage
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
