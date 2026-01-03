@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+psycopg2-binary
+redis
+ccxt
+pandas
+numpy
+scipy
+scikit-learn
+torch
+requests
+httpx
+python-telegram-bot
