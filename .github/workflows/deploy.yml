@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/institutional-signal-engine
   workflow_dispatch:
 
 jobs:

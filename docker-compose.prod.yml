@@ -45,7 +45,15 @@ services:
 
   # FastAPI Backend
   backend:
+<<<<<<< HEAD
     image: ${DOCKERHUB_USERNAME}/tradexray-backend:latest
+=======
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a
     container_name: tradexray-backend-prod
     restart: always
     depends_on:
@@ -84,7 +92,16 @@ services:
 
   # Next.js Frontend
   frontend:
+<<<<<<< HEAD
     image: ${DOCKERHUB_USERNAME}/tradexray-frontend:latest
+=======
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://backend:8000}
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a
     container_name: tradexray-frontend-prod
     restart: always
     depends_on:
@@ -139,4 +156,8 @@ volumes:
 
 networks:
   tradexray-network:
+<<<<<<< HEAD
     driver: bridge
+=======
+    driver: bridge
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a
