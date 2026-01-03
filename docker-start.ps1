@@ -39,4 +39,8 @@ Write-Host "  View logs:        docker-compose logs -f" -ForegroundColor White
 Write-Host "  Stop services:    docker-compose down" -ForegroundColor White
 Write-Host "  Restart:          docker-compose restart" -ForegroundColor White
 Write-Host ""
+<<<<<<< HEAD
 Write-Host "📚 For more details, see DOCKER.md" -ForegroundColor Yellow
+=======
+Write-Host "📚 For more details, see DOCKER.md" -ForegroundColor Yellow
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a

@@ -39,4 +39,8 @@ echo "  View logs:        docker-compose logs -f"
 echo "  Stop services:    docker-compose down"
 echo "  Restart:          docker-compose restart"
 echo ""
+<<<<<<< HEAD
 echo "📚 For more details, see DOCKER.md"
+=======
+echo "📚 For more details, see DOCKER.md"
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a

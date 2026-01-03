@@ -126,4 +126,8 @@ volumes:
 
 networks:
   tradexray-network:
+<<<<<<< HEAD
     driver: bridge
+=======
+    driver: bridge
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a

@@ -328,4 +328,8 @@ For issues:
 
 ## 📄 License
 
+<<<<<<< HEAD
 [Your License Here]
+=======
+[Your License Here]
+>>>>>>> 9110944d30265696062aafd3ebe1ba536af1f08a
