@@ -1,6 +1,6 @@
-[submodule "BullBearEye"]
-    path = BullBearEye
-    url = https://github.com/marwan191289-eng/BullBearEye.git
+[submodule "some/path"]
+    path = some/path
+    url = https://github.com/username/repo.git
 
 - uses: actions/checkout@v4
   with:
