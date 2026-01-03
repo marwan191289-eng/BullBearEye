@@ -11,17 +11,26 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install system dependencies required for Python packages
+
+# Install system dependencies required for Python scientific stack and database drivers
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     g++ \
+    build-essential \
+    git \
+    libpq-dev \
+    libc6-dev \
+    libstdc++6 \
+    libopenblas-dev \
+    liblapack-dev \
+    python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better layer caching
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --user --no-warn-script-location -r requirements.txt
+# Install Python dependencies globally (not --user)
+RUN pip install --no-warn-script-location -r requirements.txt
 
 # Final stage
 FROM python:3.11-slim

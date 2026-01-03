@@ -1,3 +1,8 @@
 [submodule "BullBearEye"]
     path = BullBearEye
     url = https://github.com/marwan191289-eng/BullBearEye.git
+
+- uses: actions/checkout@v4
+  with:
+    submodules: true
+    fetch-depth: 0
