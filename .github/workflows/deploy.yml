@@ -34,6 +34,7 @@ jobs:
         run: |
           cd frontend
           npm ci
+          npm install --save-dev @types/react @types/node
 
       - name: Build frontend
         run: |
@@ -83,7 +84,21 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            # Ensure directory exists
+            mkdir -p ~/BullBearEye
             cd ~/BullBearEye
-            git pull origin main
+            # If not a git repo, initialize and set remote
+            if [ ! -d .git ]; then
+              git init
+              git remote add origin git@github.com:${{ github.repository }}.git
+              git fetch origin main
+              git checkout -B main origin/main
+            else
+              # Ensure remote is correct
+              git remote set-url origin git@github.com:${{ github.repository }}.git
+              git fetch origin main
+              git checkout main || git checkout -b main
+              git reset --hard origin/main
+            fi
             docker-compose -f docker-compose.prod.yml pull
             docker-compose -f docker-compose.prod.yml up -d
