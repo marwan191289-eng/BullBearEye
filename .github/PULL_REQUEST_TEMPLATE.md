@@ -15,14 +15,14 @@
 
 ## Related Issue
 <!-- Link to the issue this PR addresses -->
-Fixes #
+Fixes #(issue-number)
 
 ## Changes Made
 <!-- List the main changes in this PR -->
 
-- 
-- 
-- 
+- [Describe change 1]
+- [Describe change 2]
+- [Describe change 3] 
 
 ## Testing
 <!-- Describe the tests you ran to verify your changes -->
