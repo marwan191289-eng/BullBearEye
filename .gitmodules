@@ -1,5 +1,5 @@
-[submodule "some/path"]
-    path = some/path
+[submodule "path/to/submodule"]
+    path = path/to/submodule
     url = https://github.com/username/repo.git
 
 - uses: actions/checkout@v4
